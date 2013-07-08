@@ -19,6 +19,10 @@ header("Content-type: image/png");
 // Creando el fondo con la imagen
 $imagen = imagecreatefrompng("$fondo");
 
+//conservar transparencia
+imagealphablending($imagen, true);
+imagesavealpha($imagen, true);
+
 // Color del texto
 $color = imagecolorallocate($imagen,255,255,255);
 
